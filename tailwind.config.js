@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       animation: {
-        "scale-up": "scaleUp 1s linear 500ms",
+        "scale-up": "scaleUp 1s linear",
       },
       keyframes: {
         scaleUp: {
