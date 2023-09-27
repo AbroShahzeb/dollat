@@ -4,9 +4,9 @@ function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <>
-      <nav className='bg-gray-900 max-w-[90%] mx-auto p-6 rounded-full flex justify-between items-center mt-8'>
+      <nav className='bg-gray-900 max-w-[90%] mx-auto p-6 rounded-full flex justify-between items-center mt-8 lg:w-[75%]'>
         {/* Nas Icon  */}
-        <svg viewBox='0 0 24 24' fill='none' className='h-8 w-8'>
+        <svg viewBox='0 0 24 24' fill='none' className='h-8 w-8 lg:hidden'>
           <path
             d='M2.76504 13.7446C1.74499 12.7245 1.74499 11.0707 2.76504 10.0506C3.7851 9.03065 5.43894 9.03065 6.45901 10.0506L13.847 17.4386C14.8671 18.4586 14.8671 20.1126 13.847 21.1326C12.8269 22.1527 11.1731 22.1527 10.1529 21.1326L2.76504 13.7446Z'
             fill='white'
@@ -21,35 +21,60 @@ function Navigation() {
           ></path>
         </svg>
 
-        {/* Hamburger Menu Icon  */}
-        <svg
-          viewBox='0 0 24 24'
-          fill='white'
-          xmlns='http://www.w3.org/2000/svg'
-          className='w-6 h-6 cursor-pointer'
-          onClick={() => setIsOpen(true)}
-        >
-          <g clipPath='url(#clip0_429_11066)'>
-            <path
-              d='M3 6.00092H21M3 12.0009H21M3 18.0009H21'
-              stroke='white'
-              strokeWidth='1.5'
-              strokeLinecap='round'
-              strokeLinejoin='round'
-              fill='white'
-            />
-          </g>
-          <defs>
-            <clipPath id='clip0_429_11066'>
-              <rect
-                width='24'
-                height='24'
+        {/* Nas Icon for Desktop  */}
+        <img
+          src='https://d2oi1rqwb0pj00.cloudfront.net/nasIO/new_home/svg/navbar_logo.svg'
+          alt='Nas Desktop Icon'
+          className='hidden lg:block h-15 w-15'
+        />
+
+        {/* Desktop Items */}
+        <ul className='hidden lg:block text-white mr-auto ml-4 text-lg font-semibold'>
+          <div>
+            <li>Features</li>
+          </div>
+        </ul>
+
+        <div className='flex items-center gap-5'>
+          <div className='hidden md:flex items-center gap-3'>
+            <button className='p-2 px-3 border-[1px] rounded-full text-lg text-white cursor-pointer'>
+              Log in
+            </button>
+            <button className='text-lg p-[10px] rounded-full bg-[#FBC91B]'>
+              Start for free
+            </button>
+          </div>
+
+          {/* Hamburger Menu Icon  */}
+          <svg
+            viewBox='0 0 24 24'
+            fill='white'
+            xmlns='http://www.w3.org/2000/svg'
+            className='w-6 h-6 cursor-pointer lg:hidden'
+            onClick={() => setIsOpen(true)}
+          >
+            <g clipPath='url(#clip0_429_11066)'>
+              <path
+                d='M3 6.00092H21M3 12.0009H21M3 18.0009H21'
+                stroke='white'
+                strokeWidth='1.5'
+                strokeLinecap='round'
+                strokeLinejoin='round'
                 fill='white'
-                transform='translate(0 0.000915527)'
               />
-            </clipPath>
-          </defs>
-        </svg>
+            </g>
+            <defs>
+              <clipPath id='clip0_429_11066'>
+                <rect
+                  width='24'
+                  height='24'
+                  fill='white'
+                  transform='translate(0 0.000915527)'
+                />
+              </clipPath>
+            </defs>
+          </svg>
+        </div>
       </nav>
 
       {isOpen && <MobileOpenNav setIsOpen={setIsOpen} />}

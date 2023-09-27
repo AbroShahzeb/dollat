@@ -4,7 +4,7 @@ import HomePage from "./pages/HomePage";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.DEV ? "/" : "/dollat/"}>
       <Routes>
         <Route path='/' element={<HomePage />} />
         <Route path='/about' element={<h1>About</h1>} />
