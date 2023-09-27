@@ -2,9 +2,11 @@ import { useState } from "react";
 
 function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isDesktopFeaturesOpen, setIsDesktopFeaturesOpen] = useState(false);
+  const [isDesktopUseCasesOpen, setIsDesktopUseCasesOpen] = useState(false);
   return (
     <>
-      <nav className='bg-gray-900 max-w-[90%] mx-auto p-6 rounded-full flex justify-between items-center mt-8 lg:w-[75%]'>
+      <nav className='bg-gray-900 max-w-[90%] mx-auto p-4 rounded-full flex justify-between items-center mt-8 lg:w-[75%]'>
         {/* Nas Icon  */}
         <svg viewBox='0 0 24 24' fill='none' className='h-8 w-8 lg:hidden'>
           <path
@@ -29,51 +31,45 @@ function Navigation() {
         />
 
         {/* Desktop Items */}
-        <ul className='hidden lg:block text-white mr-auto ml-4 text-lg font-semibold'>
-          <div>
-            <li>Features</li>
+        <ul className='hidden lg:block text-white mr-auto ml-4 text-lg font-medium'>
+          <div className=' relative'>
+            <li className='flex items-center p-2 rounded-full hover:bg-gray-700  group'>
+              <p>Features</p>
+              <div
+                className={`ml-1 w-6 h-6 ${
+                  isDesktopFeaturesOpen &&
+                  "group-hover:transform group-hover:rotate-180"
+                }`}
+                onMouseEnter={() => setIsDesktopFeaturesOpen(true)}
+                onMouseLeave={() => setIsDesktopFeaturesOpen(false)}
+              >
+                <img src='/public/down-arrow-icon.svg' alt='Arrow icon' />
+              </div>
+            </li>
+
+            {isDesktopFeaturesOpen && (
+              <div className='absolute top-full mt-4'>Features Hehe</div>
+            )}
           </div>
         </ul>
 
         <div className='flex items-center gap-5'>
           <div className='hidden md:flex items-center gap-3'>
-            <button className='p-2 px-3 border-[1px] rounded-full text-lg text-white cursor-pointer'>
+            <button className='p-2 px-3 border-[1px] rounded-full text-lg text-white cursor-pointer font-medium'>
               Log in
             </button>
-            <button className='text-lg p-[10px] rounded-full bg-[#FBC91B]'>
+            <button className='text-lg p-[10px] rounded-full bg-[#FBC91B] font-medium'>
               Start for free
             </button>
           </div>
 
           {/* Hamburger Menu Icon  */}
-          <svg
-            viewBox='0 0 24 24'
-            fill='white'
-            xmlns='http://www.w3.org/2000/svg'
-            className='w-6 h-6 cursor-pointer lg:hidden'
+          <div
+            className='w-6 h-6 lg:hidden cursor-pointer'
             onClick={() => setIsOpen(true)}
           >
-            <g clipPath='url(#clip0_429_11066)'>
-              <path
-                d='M3 6.00092H21M3 12.0009H21M3 18.0009H21'
-                stroke='white'
-                strokeWidth='1.5'
-                strokeLinecap='round'
-                strokeLinejoin='round'
-                fill='white'
-              />
-            </g>
-            <defs>
-              <clipPath id='clip0_429_11066'>
-                <rect
-                  width='24'
-                  height='24'
-                  fill='white'
-                  transform='translate(0 0.000915527)'
-                />
-              </clipPath>
-            </defs>
-          </svg>
+            <img src='/public/menu-icon.svg' alt='Hamburger Icon' />
+          </div>
         </div>
       </nav>
 
