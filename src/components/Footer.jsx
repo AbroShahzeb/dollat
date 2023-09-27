@@ -1,3 +1,10 @@
+import FacebookIcon from "../assets/facebook-icon.svg";
+import InstagramIcon from "../assets/instagram-icon.svg";
+import LinkedinIcon from "../assets/linkedin-icon.svg";
+import TiktokIcon from "../assets/tiktok-icon.svg";
+import TwitterIcon from "../assets/twitter-icon.svg";
+import YoutubeIcon from "../assets/youtube-icon.svg";
+
 function Footer() {
   return (
     <footer className='bg-gray-900 max-w-[90%] mx-auto py-20 px-12 rounded-3xl mt-8 lg:w-[75%]  mb-12'>
@@ -77,22 +84,22 @@ function Footer() {
           <ul className='flex flex-col items-start gap-6 md:items-center md:flex-row'>
             <div className='flex gap-3'>
               <li>
-                <img src='/youtube-icon.svg' alt='Youtube Icon' />
+                <img src={YoutubeIcon} alt='Youtube Icon' />
               </li>
               <li>
-                <img src='/instagram-icon.svg' alt='Youtube Icon' />
+                <img src={InstagramIcon} alt='Instagram Icon' />
               </li>
               <li>
-                <img src='/twitter-icon.svg' alt='Youtube Icon' />
+                <img src={TwitterIcon} alt='Twitter Icon' />
               </li>
               <li>
-                <img src='/tiktok-icon.svg' alt='Youtube Icon' />
+                <img src={TiktokIcon} alt='Tiktok Icon' />
               </li>
               <li>
-                <img src='/linkedin-icon.svg' alt='Youtube Icon' />
+                <img src={LinkedinIcon} alt='Linkedin Icon' />
               </li>
               <li>
-                <img src='/facebook-icon.svg' alt='Youtube Icon' />
+                <img src={FacebookIcon} alt='Facebook Icon' />
               </li>
             </div>
 

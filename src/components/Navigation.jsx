@@ -1,5 +1,8 @@
 import { useState } from "react";
 
+import ArrowIcon from "../assets/down-arrow-icon.svg";
+import MenuIcon from "../assets/menu-icon.svg";
+
 function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [isDesktopFeaturesOpen, setIsDesktopFeaturesOpen] = useState(false);
@@ -45,7 +48,7 @@ function Navigation() {
                   "group-hover:transform group-hover:rotate-180"
                 }`}
               >
-                <img src='/public/down-arrow-icon.svg' alt='Arrow icon' />
+                <img src={ArrowIcon} alt='Arrow icon' />
               </div>
             </li>
 
@@ -108,7 +111,7 @@ function Navigation() {
                   "group-hover:transform group-hover:rotate-180"
                 }`}
               >
-                <img src='/public/down-arrow-icon.svg' alt='Arrow icon' />
+                <img src={ArrowIcon} alt='Arrow icon' />
               </div>
             </li>
 
@@ -154,7 +157,7 @@ function Navigation() {
             className='w-6 h-6 lg:hidden cursor-pointer'
             onClick={() => setIsOpen(true)}
           >
-            <img src='/menu-icon.svg' alt='Hamburger Icon' />
+            <img src={MenuIcon} alt='Hamburger Icon' />
           </div>
         </div>
       </nav>
