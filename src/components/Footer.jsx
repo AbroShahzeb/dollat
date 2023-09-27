@@ -77,22 +77,22 @@ function Footer() {
           <ul className='flex flex-col items-start gap-6 md:items-center md:flex-row'>
             <div className='flex gap-3'>
               <li>
-                <img src='/public/youtube-icon.svg' alt='Youtube Icon' />
+                <img src='/youtube-icon.svg' alt='Youtube Icon' />
               </li>
               <li>
-                <img src='/public/instagram-icon.svg' alt='Youtube Icon' />
+                <img src='/instagram-icon.svg' alt='Youtube Icon' />
               </li>
               <li>
-                <img src='/public/twitter-icon.svg' alt='Youtube Icon' />
+                <img src='/twitter-icon.svg' alt='Youtube Icon' />
               </li>
               <li>
-                <img src='/public/tiktok-icon.svg' alt='Youtube Icon' />
+                <img src='/tiktok-icon.svg' alt='Youtube Icon' />
               </li>
               <li>
-                <img src='/public/linkedin-icon.svg' alt='Youtube Icon' />
+                <img src='/linkedin-icon.svg' alt='Youtube Icon' />
               </li>
               <li>
-                <img src='/public/facebook-icon.svg' alt='Youtube Icon' />
+                <img src='/facebook-icon.svg' alt='Youtube Icon' />
               </li>
             </div>
 

@@ -1,12 +1,13 @@
+/* eslint-disable react/prop-types */
 import { useState } from "react";
 
 function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [isDesktopFeaturesOpen, setIsDesktopFeaturesOpen] = useState(false);
-  const [isDesktopUseCasesOpen, setIsDesktopUseCasesOpen] = useState(false);
+  // const [isDesktopUseCasesOpen, setIsDesktopUseCasesOpen] = useState(false);
   return (
     <>
-      <nav className='bg-gray-900 max-w-[90%] mx-auto p-4 rounded-full flex justify-between items-center mt-8 lg:w-[75%] '>
+      <nav className='bg-gray-900 max-w-[90%] mx-auto p-4 rounded-full flex justify-between items-center mt-8 lg:w-[75%] sticky'>
         {/* Nas Icon  */}
         <svg viewBox='0 0 24 24' fill='none' className='h-8 w-8 lg:hidden'>
           <path
@@ -31,12 +32,8 @@ function Navigation() {
         />
 
         {/* Desktop Items */}
-        <ul className='hidden  text-white mr-auto ml-4 text-lg font-medium lg:flex items-center gap-2'>
-          <div
-            className='cursor-pointer relative'
-            onMouseEnter={() => setIsDesktopFeaturesOpen(true)}
-            onMouseLeave={() => setIsDesktopFeaturesOpen(false)}
-          >
+        <ul className='hidden lg:block text-white mr-auto ml-4 text-lg font-medium'>
+          <div className=' relative'>
             <li className='flex items-center p-2 rounded-full hover:bg-gray-700  group'>
               <p>Features</p>
               <div
@@ -44,99 +41,17 @@ function Navigation() {
                   isDesktopFeaturesOpen &&
                   "group-hover:transform group-hover:rotate-180"
                 }`}
+                onMouseEnter={() => setIsDesktopFeaturesOpen(true)}
+                onMouseLeave={() => setIsDesktopFeaturesOpen(false)}
               >
                 <img src='/public/down-arrow-icon.svg' alt='Arrow icon' />
               </div>
             </li>
 
             {isDesktopFeaturesOpen && (
-              <div className='absolute top-full w-80 bg-slate-900 text-sm p-3 flex flex-col items-start gap-2'>
-                <div className='flex flex-col gap-2 border-b-[1px] border-slate-500 '>
-                  <div className='flex flex-col items-start gap-1 hover:bg-slate-800 p-4 rounded-2xl'>
-                    <h3 className='text-lg text-white'>Ruby AI for WhatsApp</h3>
-                    <p className='text-md text-gray-600'>
-                      Summarize your WhatsApp chats
-                    </p>
-                  </div>
-
-                  <div className='flex flex-col items-start gap-1 hover:bg-slate-800 p-4 rounded-2xl'>
-                    <h3 className='text-lg text-white'>WhatsApp Communities</h3>
-                    <p className='text-md text-gray-600'>
-                      Supercharge your whatsapp group. See the magic in 2 clicks
-                    </p>
-                  </div>
-                </div>
-
-                <ul className='flex flex-col items-start gap-2 text-md text-white w-full'>
-                  <li className='p-3 hover:bg-slate-700 w-full rounded-lg'>
-                    Event Hosting
-                  </li>
-
-                  <li className='p-3 hover:bg-slate-700 w-full rounded-lg'>
-                    Paid Membership
-                  </li>
-                  <li className='p-3 hover:bg-slate-700 w-full rounded-lg'>
-                    Newsletters
-                  </li>
-                  <li className='p-3 hover:bg-slate-700 w-full rounded-lg'>
-                    Content Libraries
-                  </li>
-                  <li className='p-3 hover:bg-slate-700 w-full rounded-lg'>
-                    Chat Integration
-                  </li>
-                  <li className='p-3 hover:bg-slate-700 w-full rounded-lg'>
-                    Website Building
-                  </li>
-                  <li className='p-3 hover:bg-slate-700 w-full rounded-lg'>
-                    Analytics
-                  </li>
-                </ul>
-              </div>
+              <div className='absolute top-full mt-4'>Features Hehe</div>
             )}
           </div>
-
-          <div
-            className='cursor-pointer relative'
-            onMouseEnter={() => setIsDesktopUseCasesOpen(true)}
-            onMouseLeave={() => setIsDesktopUseCasesOpen(false)}
-          >
-            <li className='flex items-center p-2 rounded-full hover:bg-gray-700  group'>
-              <p>Use Cases</p>
-              <div
-                className={`ml-1 w-6 h-6 ${
-                  isDesktopUseCasesOpen &&
-                  "group-hover:transform group-hover:rotate-180"
-                }`}
-              >
-                <img src='/public/down-arrow-icon.svg' alt='Arrow icon' />
-              </div>
-            </li>
-
-            {isDesktopUseCasesOpen && (
-              <div className='absolute top-full w-80 bg-slate-900 text-sm p-3 flex flex-col items-start gap-2'>
-                <ul className='flex flex-col items-start gap-2 text-md text-white w-full'>
-                  <li className='p-3 hover:bg-slate-700 w-full rounded-lg'>
-                    For Developers
-                  </li>
-
-                  <li className='p-3 hover:bg-slate-700 w-full rounded-lg'>
-                    For Educators
-                  </li>
-                  <li className='p-3 hover:bg-slate-700 w-full rounded-lg'>
-                    For Content Creators
-                  </li>
-                  <li className='p-3 hover:bg-slate-700 w-full rounded-lg'>
-                    For Finance
-                  </li>
-                  <li className='p-3 hover:bg-slate-700 w-full rounded-lg'>
-                    For Networking
-                  </li>
-                </ul>
-              </div>
-            )}
-          </div>
-
-          <div>Pricing</div>
         </ul>
 
         <div className='flex items-center gap-5'>
@@ -154,7 +69,7 @@ function Navigation() {
             className='w-6 h-6 lg:hidden cursor-pointer'
             onClick={() => setIsOpen(true)}
           >
-            <img src='/menu-icon.svg' alt='Hamburger Icon' />
+            <img src='/public/menu-icon.svg' alt='Hamburger Icon' />
           </div>
         </div>
       </nav>
@@ -168,7 +83,7 @@ function MobileOpenNav({ setIsOpen }) {
   const [isFeaturesOpen, setIsFeaturesOpen] = useState(false);
   const [isUseCasesOpen, setIsUseCasesOpen] = useState(false);
   return (
-    <div className='w-full top-0 min-h-screen bg-gray-900 p-8 flex flex-col justify-between fixed'>
+    <div className='w-full absolute top-0 min-h-screen bg-gray-900 p-8 flex flex-col justify-between'>
       {/* Top Menu   */}
       <div className='flex items-center justify-between'>
         {/* Nas Icon  */}
