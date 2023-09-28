@@ -43,7 +43,7 @@ function FAQSection() {
       </h2>
 
       {/* FAQs  */}
-      <div className='flex flex-col gap-5 items-start'>
+      <div className='flex flex-col items-start'>
         {FAQs.map((faq) => (
           <FAQ key={faq.id} question={faq.question} answer={faq.answer} />
         ))}
@@ -61,9 +61,9 @@ function FAQ({ question, answer }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className='flex flex-col gap-3 items-start w-full'>
+    <div className='flex flex-col items-start w-full border-b-2 border-gray-200'>
       <div
-        className='flex items-center justify-between w-full py-2 cursor-pointer'
+        className='flex items-center justify-between w-full py-6 cursor-pointer'
         onClick={() => setIsOpen(!isOpen)}
       >
         <span className='text-lg md:text-xl font-medium'>{question}</span>
@@ -74,7 +74,7 @@ function FAQ({ question, answer }) {
         />
       </div>
 
-      <p className={`${isOpen ? "block" : "hidden"}`}>{answer}</p>
+      <p className={`${isOpen ? "block" : "hidden"} mb-4`}>{answer}</p>
     </div>
   );
 }
