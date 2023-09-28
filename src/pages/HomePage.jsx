@@ -3,6 +3,8 @@ import Footer from "../components/Footer";
 import Hero from "../components/Hero";
 import CommunitySection from "../components/CommunitySection";
 import MakeMoneySection from "../components/MakeMoneySection";
+import WalkThroughSection from "../components/WalkThroughSection";
+import FAQSection from "../components/FAQSection";
 
 function HomePage() {
   return (
@@ -11,6 +13,8 @@ function HomePage() {
       <Hero />
       <CommunitySection />
       <MakeMoneySection />
+      <WalkThroughSection />
+      <FAQSection />
       <Footer />
     </div>
   );

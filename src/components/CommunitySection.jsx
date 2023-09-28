@@ -6,7 +6,7 @@ import ThumbIcon from "../assets/thumb-icon.svg";
 
 function CommunitySection() {
   return (
-    <section className='max-w-[90%] mx-auto p-4 lg:w-[75%] flex flex-col lg:flex-row my-10 gap-3'>
+    <section className='max-w-[90%] mx-auto p-4 lg:w-[75%] flex flex-col md:flex-row my-10 gap-3'>
       <div className='flex flex-col gap-5'>
         <h1 className='text-3xl md:text-4xl lg:text-6xl font-semibold w-full'>
           The Community Platform for Memberships and more
