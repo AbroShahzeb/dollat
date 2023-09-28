@@ -1,7 +1,9 @@
+/* eslint-disable react/prop-types */
 import { useState } from "react";
 
 import ArrowIcon from "../assets/down-arrow-icon.svg";
 import MenuIcon from "../assets/menu-icon.svg";
+import NasIcon from "../assets/nas-icon-small.svg";
 
 function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,20 +13,9 @@ function Navigation() {
     <>
       <nav className='bg-gray-900 max-w-[90%] mx-auto p-4 rounded-full flex justify-between items-center mt-8 lg:w-[75%] '>
         {/* Nas Icon  */}
-        <svg viewBox='0 0 24 24' fill='none' className='h-8 w-8 lg:hidden'>
-          <path
-            d='M2.76504 13.7446C1.74499 12.7245 1.74499 11.0707 2.76504 10.0506C3.7851 9.03065 5.43894 9.03065 6.45901 10.0506L13.847 17.4386C14.8671 18.4586 14.8671 20.1126 13.847 21.1326C12.8269 22.1527 11.1731 22.1527 10.1529 21.1326L2.76504 13.7446Z'
-            fill='white'
-          ></path>
-          <path
-            d='M13.8477 21.1327C12.8276 22.1526 11.1738 22.1526 10.1537 21.1327C9.13366 20.1126 9.13367 18.4587 10.1537 17.4386L17.5417 10.0506C18.5617 9.03064 20.2156 9.03064 21.2356 10.0506C22.2557 11.0708 22.2557 12.7245 21.2356 13.7447L13.8477 21.1327Z'
-            fill='white'
-          ></path>
-          <path
-            d='M11.9926 7.71164C13.5698 7.71164 14.8484 6.43305 14.8484 4.85583C14.8484 3.2786 13.5698 2 11.9926 2C10.4153 2 9.13672 3.2786 9.13672 4.85583C9.13672 6.43305 10.4153 7.71164 11.9926 7.71164Z'
-            fill='#FBC91B'
-          ></path>
-        </svg>
+        <div className='lg:hidden mt-2'>
+          <img src={NasIcon} alt='Nas Logo' className='w-10 h-10' />
+        </div>
 
         {/* Nas Icon for Desktop  */}
         <img
@@ -41,7 +32,7 @@ function Navigation() {
             onMouseLeave={() => setIsDesktopFeaturesOpen(false)}
           >
             <li className='flex items-center p-2 rounded-full hover:bg-gray-700  group'>
-              <p>Features</p>
+              <p className='text-md'>Features</p>
               <div
                 className={`ml-1 w-6 h-6 ${
                   isDesktopFeaturesOpen &&
@@ -53,7 +44,7 @@ function Navigation() {
             </li>
 
             {isDesktopFeaturesOpen && (
-              <div className='absolute top-full w-80 bg-slate-900 text-sm p-3 flex flex-col items-start gap-2'>
+              <div className='absolute top-full w-80 bg-slate-900 text-sm p-3 flex flex-col items-start gap-2 rounded-2xl'>
                 <div className='flex flex-col gap-2 border-b-[1px] border-slate-500 '>
                   <div className='flex flex-col items-start gap-1 hover:bg-slate-800 p-4 rounded-2xl'>
                     <h3 className='text-lg text-white'>Ruby AI for WhatsApp</h3>
@@ -104,7 +95,7 @@ function Navigation() {
             onMouseLeave={() => setIsDesktopUseCasesOpen(false)}
           >
             <li className='flex items-center p-2 rounded-full hover:bg-gray-700  group'>
-              <p>Use Cases</p>
+              <p className='text-md'>Use Cases</p>
               <div
                 className={`ml-1 w-6 h-6 ${
                   isDesktopUseCasesOpen &&
@@ -116,7 +107,7 @@ function Navigation() {
             </li>
 
             {isDesktopUseCasesOpen && (
-              <div className='absolute top-full w-80 bg-slate-900 text-sm p-3 flex flex-col items-start gap-2'>
+              <div className='absolute top-full w-80 bg-slate-900 text-sm p-3 flex flex-col items-start gap-2 rounded-2xl'>
                 <ul className='flex flex-col items-start gap-2 text-md text-white w-full'>
                   <li className='p-3 hover:bg-slate-700 w-full rounded-lg'>
                     For Developers
@@ -139,15 +130,15 @@ function Navigation() {
             )}
           </div>
 
-          <div>Pricing</div>
+          <div className='cursor-pointer text-md'>Pricing</div>
         </ul>
 
         <div className='flex items-center gap-5'>
           <div className='hidden md:flex items-center gap-3'>
-            <button className='p-2 px-3 border-[1px] rounded-full text-lg text-white cursor-pointer font-medium'>
+            <button className='p-2 px-3 border-[1px] rounded-full text-md text-white cursor-pointer font-medium'>
               Log in
             </button>
-            <button className='text-lg p-[10px] rounded-full bg-[#FBC91B] font-medium'>
+            <button className='text-md p-[10px] rounded-full bg-[#FBC91B] font-medium'>
               Start for free
             </button>
           </div>
@@ -175,20 +166,7 @@ function MobileOpenNav({ setIsOpen }) {
       {/* Top Menu   */}
       <div className='flex items-center justify-between'>
         {/* Nas Icon  */}
-        <svg viewBox='0 0 24 24' fill='none' className='h-8 w-8'>
-          <path
-            d='M2.76504 13.7446C1.74499 12.7245 1.74499 11.0707 2.76504 10.0506C3.7851 9.03065 5.43894 9.03065 6.45901 10.0506L13.847 17.4386C14.8671 18.4586 14.8671 20.1126 13.847 21.1326C12.8269 22.1527 11.1731 22.1527 10.1529 21.1326L2.76504 13.7446Z'
-            fill='white'
-          ></path>
-          <path
-            d='M13.8477 21.1327C12.8276 22.1526 11.1738 22.1526 10.1537 21.1327C9.13366 20.1126 9.13367 18.4587 10.1537 17.4386L17.5417 10.0506C18.5617 9.03064 20.2156 9.03064 21.2356 10.0506C22.2557 11.0708 22.2557 12.7245 21.2356 13.7447L13.8477 21.1327Z'
-            fill='white'
-          ></path>
-          <path
-            d='M11.9926 7.71164C13.5698 7.71164 14.8484 6.43305 14.8484 4.85583C14.8484 3.2786 13.5698 2 11.9926 2C10.4153 2 9.13672 3.2786 9.13672 4.85583C9.13672 6.43305 10.4153 7.71164 11.9926 7.71164Z'
-            fill='#FBC91B'
-          ></path>
-        </svg>
+        <img src={NasIcon} alt='Nas Logo' className='w-10 h-10' />
 
         <svg
           width='24'
