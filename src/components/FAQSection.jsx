@@ -49,7 +49,7 @@ function FAQSection() {
         ))}
       </div>
 
-      <button className='p-3 px-4 text-md bg-[#FBC91B] font-medium rounded-full self-center'>
+      <button className='p-3 px-4 text-md bg-[#FBC91B] font-medium rounded-full self-stretch  md:self-center'>
         Start for free
       </button>
     </section>

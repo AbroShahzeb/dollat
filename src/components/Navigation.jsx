@@ -32,7 +32,7 @@ function Navigation() {
             onMouseLeave={() => setIsDesktopFeaturesOpen(false)}
           >
             <li className='flex items-center p-2 rounded-full hover:bg-gray-700  group'>
-              <p className='text-md'>Features</p>
+              <p className='text-md'>Businesses</p>
               <div
                 className={`ml-1 w-6 h-6 ${
                   isDesktopFeaturesOpen &&
@@ -47,14 +47,27 @@ function Navigation() {
               <div className='absolute top-full w-80 bg-slate-900 text-sm p-3 flex flex-col items-start gap-2 rounded-2xl'>
                 <div className='flex flex-col gap-2 border-b-[1px] border-slate-500 '>
                   <div className='flex flex-col items-start gap-1 hover:bg-slate-800 p-4 rounded-2xl'>
-                    <h3 className='text-lg text-white'>Ruby AI for WhatsApp</h3>
+                    <h3 className='text-lg text-white'>
+                      Dollat Freelancing for South Asians
+                    </h3>
                     <p className='text-md text-gray-600'>
                       Summarize your WhatsApp chats
                     </p>
                   </div>
 
                   <div className='flex flex-col items-start gap-1 hover:bg-slate-800 p-4 rounded-2xl'>
-                    <h3 className='text-lg text-white'>WhatsApp Communities</h3>
+                    <h3 className='text-lg text-white'>
+                      Dollat Care Foundation
+                    </h3>
+                    <p className='text-md text-gray-600'>
+                      Supercharge your whatsapp group. See the magic in 2 clicks
+                    </p>
+                  </div>
+
+                  <div className='flex flex-col items-start gap-1 hover:bg-slate-800 p-4 rounded-2xl'>
+                    <h3 className='text-lg text-white'>
+                      Digital Media by Dollat
+                    </h3>
                     <p className='text-md text-gray-600'>
                       Supercharge your whatsapp group. See the magic in 2 clicks
                     </p>
@@ -63,26 +76,11 @@ function Navigation() {
 
                 <ul className='flex flex-col items-start gap-2 text-md text-white w-full'>
                   <li className='p-3 hover:bg-slate-700 w-full rounded-lg'>
-                    Event Hosting
+                    Networking Events
                   </li>
 
                   <li className='p-3 hover:bg-slate-700 w-full rounded-lg'>
-                    Paid Membership
-                  </li>
-                  <li className='p-3 hover:bg-slate-700 w-full rounded-lg'>
                     Newsletters
-                  </li>
-                  <li className='p-3 hover:bg-slate-700 w-full rounded-lg'>
-                    Content Libraries
-                  </li>
-                  <li className='p-3 hover:bg-slate-700 w-full rounded-lg'>
-                    Chat Integration
-                  </li>
-                  <li className='p-3 hover:bg-slate-700 w-full rounded-lg'>
-                    Website Building
-                  </li>
-                  <li className='p-3 hover:bg-slate-700 w-full rounded-lg'>
-                    Analytics
                   </li>
                 </ul>
               </div>
@@ -95,7 +93,7 @@ function Navigation() {
             onMouseLeave={() => setIsDesktopUseCasesOpen(false)}
           >
             <li className='flex items-center p-2 rounded-full hover:bg-gray-700  group'>
-              <p className='text-md'>Use Cases</p>
+              <p className='text-md'>Communities</p>
               <div
                 className={`ml-1 w-6 h-6 ${
                   isDesktopUseCasesOpen &&
@@ -110,20 +108,17 @@ function Navigation() {
               <div className='absolute top-full w-80 bg-slate-900 text-sm p-3 flex flex-col items-start gap-2 rounded-2xl'>
                 <ul className='flex flex-col items-start gap-2 text-md text-white w-full'>
                   <li className='p-3 hover:bg-slate-700 w-full rounded-lg'>
-                    For Developers
+                    For Entrepreneurs
                   </li>
 
                   <li className='p-3 hover:bg-slate-700 w-full rounded-lg'>
                     For Educators
                   </li>
                   <li className='p-3 hover:bg-slate-700 w-full rounded-lg'>
-                    For Content Creators
+                    For Businesses
                   </li>
                   <li className='p-3 hover:bg-slate-700 w-full rounded-lg'>
-                    For Finance
-                  </li>
-                  <li className='p-3 hover:bg-slate-700 w-full rounded-lg'>
-                    For Networking
+                    Dollat Academy
                   </li>
                 </ul>
               </div>
@@ -136,7 +131,7 @@ function Navigation() {
         <div className='flex items-center gap-5'>
           <div className='hidden md:flex items-center gap-3'>
             <button className='p-2 px-3 border-[1px] rounded-full text-md text-white cursor-pointer font-medium'>
-              Log in
+              Explore
             </button>
             <button className='text-md p-[10px] rounded-full bg-[#FBC91B] font-medium'>
               Start for free
@@ -186,7 +181,7 @@ function MobileOpenNav({ setIsOpen }) {
         {/* Features Section  */}
         <div className=' border-b-[1px] border-gray-500'>
           <div className='flex items-center justify-between text-white text-2xl py-6'>
-            <p>Features</p>
+            <p>Businesses</p>
 
             <svg
               width='28'
@@ -206,15 +201,11 @@ function MobileOpenNav({ setIsOpen }) {
           {/* Features List  */}
           {isFeaturesOpen && (
             <ul className='text-white text-lg font-medium flex flex-col gap-4'>
-              <li className='py-2'>Ruby AI for WhatsApp</li>
-              <li className='py-2'>WhatsApp Communities</li>
+              <li className='py-2'>Dollat Freelancing for South Asians</li>
+              <li className='py-2'>Dollat Care Foundation</li>
+              <li className='py-2'>Digital Media by Dollat</li>
               <li className='py-2'>Event Hosting</li>
-              <li className='py-2'>Paid Membership</li>
               <li className='py-2'>Newsletters</li>
-              <li className='py-2'>Content Library</li>
-              <li className='py-2'>Chat Integration</li>
-              <li className='py-2'>Website Building</li>
-              <li className='py-2'>Analytics</li>
             </ul>
           )}
         </div>
@@ -222,7 +213,7 @@ function MobileOpenNav({ setIsOpen }) {
         {/* Use Cases Section  */}
         <div className='border-b-[1px] border-gray-500'>
           <div className='flex items-center justify-between text-white text-2xl py-6 '>
-            <p>Use cases</p>
+            <p>Communities</p>
 
             <svg
               width='28'
@@ -242,11 +233,10 @@ function MobileOpenNav({ setIsOpen }) {
           {/* Use Cases List  */}
           {isUseCasesOpen && (
             <ul className='text-white text-lg font-medium flex flex-col gap-4'>
-              <li className='py-2'>For Developers</li>
+              <li className='py-2'>For Entrepreneurs</li>
               <li className='py-2'>For Educators</li>
-              <li className='py-2'>For Content Creators</li>
-              <li className='py-2'>For Finance</li>
-              <li className='py-2'>For Networking</li>
+              <li className='py-2'>For Businesses</li>
+              <li className='py-2'>Dollat Academy</li>
             </ul>
           )}
         </div>
@@ -260,7 +250,7 @@ function MobileOpenNav({ setIsOpen }) {
       {/* Login Signup Section  */}
       <div className='mb-8 flex flex-col w-full gap-5'>
         <button className='rounded-full border-[1px] border-white text-white text-xl p-3 font-semibold cursor-pointer'>
-          Log in
+          Explore
         </button>
         <button className='rounded-full cursor-pointer  text-xl p-3 bg-[#FBC91B] font-semibold'>
           Start for free

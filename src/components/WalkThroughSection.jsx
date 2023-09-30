@@ -5,7 +5,7 @@ function WalkThroughSection() {
     <section className='max-w-[90%] mx-auto p-4 lg:w-[75%] flex flex-col my-16 gap-12'>
       <div className='flex flex-col md:items-center gap-5'>
         <h2 className='text-2xl md:text-4xl lg:text-5xl font-semibold text-center md:w-2/3'>
-          You can focus on your members. Nas.io handles the rest.
+          You can focus on your learning. Dollat.pk handles the earning worries.
         </h2>
         <button className='p-4 px-5 bg-black text-white flex items-center justify-center gap-2 rounded-full'>
           <img src={PlayIcon} alt='Play Icon' />

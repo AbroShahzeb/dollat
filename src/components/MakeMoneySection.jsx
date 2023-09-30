@@ -6,7 +6,7 @@ function MakeMoneySection() {
   return (
     <section className='max-w-[90%] mx-auto p-4 md:pb-0 lg:w-[75%] flex flex-col my-16 gap-6'>
       <h2 className='text-3xl md:text-4xl lg:text-5xl font-medium text-center'>
-        Make your first dollar on Nas.io
+        Make your first dollar on Dollat
       </h2>
       <div className='bg-[#FEFBF1] rounded-[34px] p-8 md:p-16 md:pb-0 flex flex-col gap-8 '>
         <div className='flex flex-col md:flex-row items-start gap-8 md:gap-5'>
