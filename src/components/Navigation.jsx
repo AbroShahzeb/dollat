@@ -9,6 +9,7 @@ function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [isDesktopFeaturesOpen, setIsDesktopFeaturesOpen] = useState(false);
   const [isDesktopUseCasesOpen, setIsDesktopUseCasesOpen] = useState(false);
+  const [isDesktopCompanyOpen, setIsDesktopCompanyOpen] = useState(false);
   return (
     <>
       <nav className='bg-gray-900 max-w-[90%] mx-auto p-4 rounded-full flex justify-between items-center mt-8 lg:w-[75%] '>
@@ -125,7 +126,39 @@ function Navigation() {
             )}
           </div>
 
-          <div className='cursor-pointer text-md'>Pricing</div>
+          <div
+            className='cursor-pointer relative'
+            onMouseEnter={() => setIsDesktopCompanyOpen(true)}
+            onMouseLeave={() => setIsDesktopCompanyOpen(false)}
+          >
+            <li className='flex items-center p-2 rounded-full hover:bg-gray-700  group'>
+              <p className='text-md'>Company</p>
+              <div
+                className={`ml-1 w-6 h-6 ${
+                  isDesktopCompanyOpen &&
+                  "group-hover:transform group-hover:rotate-180"
+                }`}
+              >
+                <img src={ArrowIcon} alt='Arrow icon' />
+              </div>
+            </li>
+
+            {isDesktopCompanyOpen && (
+              <div className='absolute top-full w-80 bg-slate-900 text-sm p-3 flex flex-col items-start gap-2 rounded-2xl'>
+                <ul className='flex flex-col items-start gap-2 text-md text-white w-full'>
+                  <li className='p-3 hover:bg-slate-700 w-full rounded-lg'>
+                    History
+                  </li>
+
+                  <li className='p-3 hover:bg-slate-700 w-full rounded-lg'>
+                    Press
+                  </li>
+                </ul>
+              </div>
+            )}
+          </div>
+
+          <div className='cursor-pointer text-md'>Careers</div>
         </ul>
 
         <div className='flex items-center gap-5'>
@@ -156,6 +189,7 @@ function Navigation() {
 function MobileOpenNav({ setIsOpen }) {
   const [isFeaturesOpen, setIsFeaturesOpen] = useState(false);
   const [isUseCasesOpen, setIsUseCasesOpen] = useState(false);
+  const [isCompanyOpen, setIsCompanyOpen] = useState(false);
   return (
     <div className='w-full top-0 min-h-screen bg-gray-900 p-8 flex flex-col justify-between fixed'>
       {/* Top Menu   */}
@@ -241,9 +275,38 @@ function MobileOpenNav({ setIsOpen }) {
           )}
         </div>
 
+        {/* Company Section  */}
+        <div className='border-b-[1px] border-gray-500'>
+          <div className='flex items-center justify-between text-white text-2xl py-6 '>
+            <p>Company</p>
+
+            <svg
+              width='28'
+              height='28'
+              viewBox='0 0 28 28'
+              fill='white'
+              className={`ml-4 ${isCompanyOpen && "transform rotate-180"}`}
+              onClick={() => setIsCompanyOpen(!isCompanyOpen)}
+            >
+              <path
+                d='M16.1611 9.31093L11.9946 13.4355L7.82819 9.31093C7.4094 8.89636 6.73289 8.89636 6.31409 9.31093C5.8953 9.72551 5.8953 10.3952 6.31409 10.8098L11.243 15.6891C11.6617 16.1036 12.3383 16.1036 12.757 15.6891L17.6859 10.8098C18.1047 10.3952 18.1047 9.72551 17.6859 9.31093C17.2671 8.90699 16.5799 8.89636 16.1611 9.31093Z'
+                fill='white'
+                className='fill-light-f6'
+              ></path>
+            </svg>
+          </div>
+          {/* Use Cases List  */}
+          {isCompanyOpen && (
+            <ul className='text-white text-lg font-medium flex flex-col gap-4'>
+              <li className='py-2'>History</li>
+              <li className='py-2'>Press</li>
+            </ul>
+          )}
+        </div>
+
         {/* Pricing Section  */}
         <div className='text-2xl py-6 border-b-[1px] border-gray-500 text-white mb-10'>
-          Pricing
+          Careers
         </div>
       </div>
 

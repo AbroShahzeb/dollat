@@ -7,3 +7,12 @@
 body {
   font-family: "Poppins", sans-serif;
 }
+
+.slider-thumb::-webkit-slider-thumb {
+  width: 20px; /* Set the width of the thumb */
+  height: 20px; /* Set the height of the thumb */
+  background-color: fuchsia; /* Change the background color of the thumb */
+  border: 2px solid purple; /* Add a border to the thumb */
+  border-radius: 50%; /* Make the thumb round */
+  cursor: pointer; /* Change the cursor on hover */
+}

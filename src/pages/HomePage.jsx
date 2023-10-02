@@ -3,6 +3,7 @@ import Navigation from "../components/Navigation";
 import Hero from "../components/Hero";
 import CommunitySection from "../components/CommunitySection";
 import MakeMoneySection from "../components/MakeMoneySection";
+import EarningLimitsSection from "../components/EarningLimitsSection";
 import WalkThroughSection from "../components/WalkThroughSection";
 import ChatGroupSection from "../components/ChatGroupSection";
 import ChatSection from "../components/ChatSection";
@@ -20,6 +21,7 @@ function HomePage() {
       <Hero />
       <CommunitySection />
       <MakeMoneySection />
+      <EarningLimitsSection />
       <WalkThroughSection />
       <ChatGroupSection />
       <ChatSection />

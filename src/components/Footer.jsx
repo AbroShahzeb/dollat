@@ -23,12 +23,12 @@ function Footer() {
           {/* App download images   */}
           <div className='flex gap-3 items-center flex-wrap'>
             <img
-              src='https://d2oi1rqwb0pj00.cloudfront.net/nasIO/common/png/app-store-download-button.png'
+              src='https://www.cashless.com.pk/wp-content/uploads/elementor/thumbs/app-1-puavl8tc5f3j5j1l00b9e5xtysumuxbg1auprdrryc.png'
               alt='App store icon'
               className='w-32'
             />
             <img
-              src='https://d2oi1rqwb0pj00.cloudfront.net/nasIO/common/png/play-store-download-button.png'
+              src='https://www.cashless.com.pk/wp-content/uploads/elementor/thumbs/play-3-puavi9nqib0udzd8dpzshwza8vishfi1mkhd1u6nno.png'
               alt='Play Store icon'
               className='w-32'
             />
@@ -39,28 +39,24 @@ function Footer() {
         <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12'>
           {/* Features Links  */}
           <div className='flex flex-col items-start gap-3 text-gray-400 text-sm font-medium'>
-            <h3 className='text-white uppercase'>Features</h3>
+            <h3 className='text-white uppercase'>Businesses</h3>
             <ul className='flex flex-col gap-5 items-start'>
-              <li>WhatsApp Communities</li>
-              <li>Event Hosting</li>
-              <li>Paid Membership</li>
+              <li>Dollat Freelancing for South Asians</li>
+              <li>Dollat Care Foundation</li>
+              <li>Digital Media by Dollat</li>
+              <li>Networking Events</li>
               <li>Newsletter</li>
-              <li>Online Course</li>
-              <li>Chat Integration</li>
-              <li>Website Building</li>
-              <li>Analytics</li>
             </ul>
           </div>
 
           {/* Use Cases Links  */}
           <div className='flex flex-col items-start gap-3 text-gray-400 text-sm font-medium'>
-            <h3 className='text-white uppercase'>Use Cases</h3>
+            <h3 className='text-white uppercase'>Communities</h3>
             <ul className='flex flex-col gap-5 items-start'>
-              <li>For Developers</li>
+              <li>For Entrepreneurs</li>
               <li>For Educators</li>
-              <li>For Content Creators</li>
-              <li>For Finance</li>
-              <li>For Networking</li>
+              <li>For Businesses</li>
+              <li>Dollat Academy</li>
             </ul>
           </div>
 
@@ -68,10 +64,8 @@ function Footer() {
           <div className='flex flex-col items-start gap-3 text-gray-400 text-sm font-medium'>
             <h3 className='text-white uppercase'>Company</h3>
             <ul className='flex flex-col gap-5 items-start'>
-              <li>About Us</li>
-              <li>Blog</li>
-              <li>Career</li>
-              <li>Academy</li>
+              <li>History</li>
+              <li>Press</li>
             </ul>
           </div>
         </div>
